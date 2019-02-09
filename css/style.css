@@ -176,7 +176,7 @@ main > a:hover {
     height: 100%;
 }
 #primary:first-child {
-    background-color: whitesmoke;
+    background-color: #fff;
 }
 
 #primary .inner {
