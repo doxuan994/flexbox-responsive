@@ -9,14 +9,11 @@ body {
     box-sizing: border-box;
 }
 #content > * {
-    background: #3bbced;
+    background: #F0F0F0;
     padding: 30px;
 }
 #content > main {
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 60px;
-    padding-left: 30px;
+    padding: 30px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -135,7 +132,6 @@ Banner
 #banner {
     background-image: -webkit-gradient(linear, left top, right bottom, from(darkslateblue), to(goldenrod));
     background-image: linear-gradient(to bottom right, darkslateblue, goldenrod);
-
     height: 400px;
 }
 
@@ -162,7 +158,6 @@ main > a:hover {
 }
 
 /* CSS flex-box layout is a CSS3 web layout model */
-
 #primary {
     display: flex;
     flex-flow: row wrap;
@@ -171,12 +166,17 @@ main > a:hover {
 #primary div {
     flex: auto;
     /* max-width for justify-content */
-    max-width: 49.85%;
+    max-width: 49.8%;
     max-width: 50%
+
+    /* height is important */
     height: 100%;
 }
-#primary:first-child {
-    /* background-color: #fff; */
+
+@media screen and (max-width: 760px) {
+    #primary div {
+        max-width: 100%;
+    }
 }
 
 #primary .inner {
@@ -185,29 +185,33 @@ main > a:hover {
     align-items: flex-end;
     justify-content: space-between;
 }
-
 #primary .inner > div {
     max-width: 100%;
+    height: 100%;
 }
-
 #primary .inner > div:first-child {
-
+    /* background: red; */
+    flex: 1;
 }
-
 #primary .inner > div:last-child {
-
-    background-color: darkslateblue;
+    flex: 1;
+    /* background: yellow; */
 }
-
 #primary .inner-inner {
     display: flex;
     flex-flow: row;
+    justify-content: space-between;
 }
-
 #primary .inner-inner > div {
-    width: 50%;
+    max-width: 49.6%;
+    height: 100%;
 }
-
+#primary .inner-inner > div:nth-child(1) {
+    background-color: darkslateblue;
+}
+#primary .inner-inner > div:nth-child(2) {
+    background-color: silver;
+}
 #primary div img {
     /*  width: 100%; is important */
     width: 100%;
