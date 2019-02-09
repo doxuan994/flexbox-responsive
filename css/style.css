@@ -110,16 +110,19 @@ input#menu {
     .dropdown-menu label {
         display: block;
         cursor: pointer;
-        padding: 20px 0 20px 40px;
-        background: url("../img/002-menu-1.png") no-repeat left center;
+        padding: 20px 0 20px 60px;
+        background: url("../img/002-menu.png") no-repeat left center;
         -webkit-transition: background 0.3s linear;
         transition: background 0.3s linear;
+        background-size: 50px;
     }
     /* Toggle effect */
     input:checked ~ label {
         background: url("../img/001-error.png") no-repeat left center;
         -webkit-transition: background 0.3s linear;
         transition: background 0.3s linear;
+        background-size: 50px;
+
     }
     input:checked ~ .site-navigation {
         max-height: 100%;
@@ -132,8 +135,8 @@ Banner
 #banner {
     background-image: -webkit-gradient(linear, left top, right bottom, from(darkslateblue), to(goldenrod));
     background-image: linear-gradient(to bottom right, darkslateblue, goldenrod);
-    padding: 15%;
-    height: 100%;
+
+    height: 400px;
 }
 
 
