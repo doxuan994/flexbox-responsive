@@ -132,10 +132,42 @@ Banner
 #banner {
     background-image: -webkit-gradient(linear, left top, right bottom, from(darkslateblue), to(goldenrod));
     background-image: linear-gradient(to bottom right, darkslateblue, goldenrod);
-    height: 400px;
+    padding: 30px;
 }
 
+#banner img {
+    max-width: 100%;
+}
 
+#banner div {
+    background-color: #333;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 15px;
+}
+#banner p {
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+
+#banner a {
+    border: 2px solid #fff;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    max-width: 210px;
+    margin: 20px 15px;
+    border-radius: 25px;
+    transition: transform .2s; /* Animation */
+}
+#banner a:hover {
+    transform: scale(1.1);
+    font-weight: bolder;
+    border-color: khaki;
+    color: khaki;
+    background-color: dimgray;
+}
 
 /* -----------------------------------------------------------------------------
 Main
